@@ -217,14 +217,6 @@ make clean
 4. Verify with `make verify-all`
 5. Submit a pull request
 
-### Adding New Properties
-```tla
-\* New safety property template
-NewSafetyProperty ==
-    \A conditions : safety_condition => desired_outcome
-
-\* Add to appropriate .cfg file under INVARIANTS section
-```
 
 ## Challenge Achievements
 
@@ -248,5 +240,3 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 > **Ready to Verify?** Start with `make verify-correct` for a quick 20-minute validation, or run `make verify-all` for the complete verification suite.
-
-**Status**: ✅ **Challenge Complete** - All formal verification requirements satisfied with three independent verification pathways.
