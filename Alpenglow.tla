@@ -1,6 +1,6 @@
 --------------------------- MODULE Alpenglow ---------------------------
 (*
-    Enhanced Formal Specification of Solana Alpenglow Consensus Protocol
+    Formal Specification of Solana Alpenglow Consensus Protocol
     
     Key Features:
     - Votor: Dual voting paths (80% fast, 60% slow)  
@@ -13,12 +13,6 @@
 
 EXTENDS Integers, Sequences, FiniteSets, TLC
 
-(*
-    Note: TLAPS (TLA+ Proof System) is NOT imported here to allow TLC model checking.
-    To verify formal proofs with TLAPS, run: tlapm Alpenglow.tla
-    The TLAPS proofs (Lemma20, Lemma24, Theorem1, etc.) are written in standard
-    TLA+ proof syntax and can be checked independently with the tlapm command.
-*)
 
 CONSTANTS
     Nodes,              \* Set of validator nodes
