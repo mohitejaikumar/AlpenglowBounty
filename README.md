@@ -143,6 +143,17 @@ make syntax-check
 - 🟢 **Formal Proofs**: ✅ VERIFIED - Mathematical correctness proofs
 - 🟢 **Overall Status**: ✅ COMPLETE - All requirements satisfied
 
+# Results 
+### CorrectNormalModelConfig
+  
+  <img width="581" height="212" alt="image" src="https://github.com/user-attachments/assets/2401eeb6-fa85-4f61-a65a-6573674bd29e" />
+
+### ByzantineModelConfig
+
+  <img width="529" height="201" alt="image" src="https://github.com/user-attachments/assets/d5dfddef-f6d5-4d26-904f-6bd23411cab2" />
+
+
+
 ## 🔬 Protocol Components Modeled
 
 ### Core Alpenglow Components
