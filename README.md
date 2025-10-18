@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Verification](https://img.shields.io/badge/Verification-Complete-brightgreen)](#verification-results)
 
-This repository contains a comprehensive formal verification suite for the **Solana Alpenglow consensus protocol**, transforming the mathematical theorems from the [whitepaper](alpenglow.md) into machine-verified proofs using TLA+.
+This repository contains a comprehensive formal verification suite for the **Solana Alpenglow consensus protocol**, transforming the mathematical theorems from the whitepaper into machine-verified proofs using TLA+.
 
 ## Quick Start - Three Independent Verification Commands
 
