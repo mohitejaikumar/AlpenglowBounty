@@ -10,7 +10,7 @@ This repository contains a comprehensive formal verification suite for the **Sol
 
 This project provides three independent verification commands that can be run separately:
 
-### 1. **Correct Normal Model Verification** (~20 minutes)
+### 1. **Correct Normal Model Verification** (~13 minutes)
 ```bash
 make verify-correct
 ```
@@ -19,7 +19,7 @@ make verify-correct
 - **Output**: `correct-normal-verification.log`
 - **Tests**: Fast path (80%) and slow path (60%) finalization under normal conditions
 
-### 2. **Byzantine Fault Tolerance Verification** (~55 minutes)  
+### 2. **Byzantine Fault Tolerance Verification** (~28 minutes)  
 ```bash
 make verify-byzantine
 ```
