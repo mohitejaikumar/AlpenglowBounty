@@ -39,7 +39,7 @@ make verify-proofs
 - **Output**: `proofs-verification.log`
 - **Tests**: Theorem 1 (Safety), lemmas, and mathematical correctness proofs
 
-### Run All Verifications (~80+ minutes)
+### Run All Verifications (~50+ minutes)
 ```bash
 make verify-all
 ```
