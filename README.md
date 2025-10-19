@@ -6,6 +6,8 @@
 
 This repository contains a comprehensive formal verification suite for the **Solana Alpenglow consensus protocol**, transforming the mathematical theorems from the whitepaper into machine-verified proofs using TLA+.
 
+Whitepaper - https://drive.google.com/file/d/1Rlr3PdHsBmPahOInP6-Pl0bMzdayltdV/view?usp=drivesdk
+
 ## Quick Start - Three Independent Verification Commands
 
 This project provides three independent verification commands that can be run separately:
