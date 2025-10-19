@@ -135,15 +135,10 @@ make syntax-check
 
 | Command | Configuration | Nodes | Byzantine | Runtime | Properties Verified |
 |---------|---------------|-------|-----------|---------|---------------------|
-| `verify-correct` | CorrectNormal | 4 | 0 (0%) | ~20 min | Safety + Liveness |
-| `verify-byzantine` | Byzantine | 5 | 1 (20%) | ~55 min | Safety + Byzantine Resilience |
+| `verify-correct` | CorrectNormal | 4 | 0 (0%) | ~13 min | Safety + Liveness |
+| `verify-byzantine` | Byzantine | 5 | 1 (20%) | ~28 min | Safety + Byzantine Resilience |
 | `verify-proofs` | Mathematical | N/A | N/A | Variable | Formal Proofs |
 
-### Current Status
-- 🟢 **Correct Normal Model**: ✅ VERIFIED - All safety and liveness properties
-- 🟢 **Byzantine Model**: ✅ VERIFIED - Byzantine resilience up to 20% malicious stake  
-- 🟢 **Formal Proofs**: ✅ VERIFIED - Mathematical correctness proofs
-- 🟢 **Overall Status**: ✅ COMPLETE - All requirements satisfied
 
 # Results 
 ### CorrectNormalModelConfig
@@ -155,93 +150,13 @@ make syntax-check
   <img width="529" height="201" alt="image" src="https://github.com/user-attachments/assets/d5dfddef-f6d5-4d26-904f-6bd23411cab2" />
 
 
-
-## 🔬 Protocol Components Modeled
-
-### Core Alpenglow Components
-- **Votor**: Dual voting paths with concurrent fast/slow finalization
-- **Rotor**: Erasure-coded block propagation with stake-weighted relays
-- **SafeToNotar/SafeToSkip**: Fallback mechanisms from Definition 16
-- **Leader Windows**: Rotation and handoff protocols
-- **Certificate Aggregation**: Stake-weighted vote collection
-
-### Enhanced Verification Features
-- **Equivocation Tracking**: Records all Byzantine double-voting attempts
-- **Vote History**: Forensic analysis of conflicting votes
-- **Shred-Level Modeling**: Individual erasure-coded fragment tracking
-- **Reconstruction Verification**: γ-out-of-Γ threshold enforcement
-
-## Advanced Usage
-
-### Individual Log Analysis
-```bash
-# View specific verification logs
-make view-correct-log      # Less pager for correct model results
-make view-byzantine-log    # Less pager for Byzantine results  
-make view-proofs-log       # Less pager for proof verification
-
-# Quick summary of all runs
-make summary
-```
-
-### Development Workflow
-```bash
-# Quick development check (reduced coverage)
-make verify-quick
-
-# Syntax validation only
-make syntax-check
-
-# Combined development checks
-make dev-check
-```
-
-### Direct Tool Usage
-```bash
-# Syntax check only (alternative to make syntax-check)
-java -cp $HOME/tla/tla2tools.jar tla2sany.SANY Alpenglow.tla
-
-# Custom TLC run with specific parameters
-java -Xmx8g -cp $HOME/tla/tla2tools.jar tlc2.TLC \
-    -config AlpenglowCorrectNormalModelConfig.cfg \
-    -workers auto -maxSetSize 1000000 \
-    Alpenglow.tla
-```
-
-### Cleanup
-```bash
-# Remove all logs and temporary files
-make clean
-```
-
 ## Documentation & Resources
 
-- **[Original Alpenglow Whitepaper](alpenglow.md)**: Mathematical foundations and theorems
 - **[TLA+ Specification](Alpenglow.tla)**: Complete formal model (1611 lines)
 - **Configuration Files**: 
   - `AlpenglowCorrectNormalModelConfig.cfg` - Normal operation parameters
   - `AlpenglowByzantineModelConfig.cfg` - Byzantine testing parameters
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Add tests for new properties  
-4. Verify with `make verify-all`
-5. Submit a pull request
-
-
-## Challenge Achievements
-
-- ✅ **Complete Formal Specification** - Full TLA+ model of Alpenglow protocol
-- ✅ **Machine-Verified Safety** - Automated proof of all critical theorems  
-- ✅ **Byzantine Fault Tolerance** - Verification up to theoretical 20% limit
-- ✅ **Three Independent Verifications** - Separate correct, Byzantine, and proof checking
-- ✅ **Production Ready** - Scalable verification suite with comprehensive logging
-
-## License
-
-MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
@@ -249,7 +164,3 @@ MIT License - see [LICENSE](LICENSE) file for details.
 - **Alpenglow Authors**: Quentin Kniep, Jakub Sliwinski, Roger Wattenhofer  
 - **Leslie Lamport**: TLA+ specification language
 - **TLA+ Community**: Model checking tools and methodology
-
----
-
-> **Ready to Verify?** Start with `make verify-correct` for a quick 20-minute validation, or run `make verify-all` for the complete verification suite.
